@@ -54,7 +54,7 @@ class ezpublish::install {
     mode    => '777'
   } ~>
   exec { "run_install_packages":
-    command => "./install_packages.sh | sh",
+    command => "install_packages.sh | sh",
     cwd  => "$www/$ezpublish_folder",
     path => "/usr/bin:/usr/sbin:/bin:/usr/local/bin:$www/$ezpublish_folder",
   } ~>
